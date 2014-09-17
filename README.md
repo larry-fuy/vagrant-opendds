@@ -25,7 +25,7 @@ and then install Chocolatey (lauch VirtualBox Manager then save the running VM a
 ```
 vagrant box package --base NAME-OF-VM --name NAME-OF-BOX 
 ```
-```NAEM-OF-VM``` is the name of VM shown in VirtualBox Manager.
+```NAEM-OF-VM``` is the name of the running VM shown in VirtualBox Manager.
 
 
 
