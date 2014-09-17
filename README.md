@@ -21,7 +21,7 @@ You could build your base Vagrant box and then provision and install OpenDDS ins
 vagrant init lmayorga1980/windows7-sp1
 vagrant up
 ```
-and then install Chocolatey (Lauching VirtualBox Manager. Save the running VM and restart it to access GUI). After this you could get the base box for OpenDDS by repackaging the downloaded box. 
+and then install Chocolatey (lauch VirtualBox Manager then save the running VM and restart it to access GUI). After this you could get the base box for OpenDDS by repackaging the downloaded box. 
 ```
 vagrant box package --base NAME-OF-VM --name NAME-OF-BOX 
 ```
