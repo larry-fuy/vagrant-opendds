@@ -1,0 +1,24 @@
+REM assuming chocolatey is installed. Otherwise
+REM (install chocolatey) This is a bug in powershell v2. So just download the predefined package
+REM @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" 
+REM SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+
+REM install required softwares
+choco install ActivePerl
+choco install svn
+set PATH=%PATH%;"C:\Program Files (x86)\Subversion\bin"
+REM check out opendds source code
+cd C:\
+svn checkout svn://svn.dre.vanderbilt.edu/DOC/DDS/trunk
+choco install vcexpress2010
+call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+cd "C:\trunk"
+perl configure
+echo setenv
+call setenv.cmd
+echo msbuild
+type nul > build_dds.log
+msbuild DDS_TAOv2_all.sln /p:Configuration=Debug  > build_dds.log
+copy build_dds.log c:\vagrant\build_dds.log
+
