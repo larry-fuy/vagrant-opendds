@@ -33,7 +33,7 @@ vagrant box package --base NAME-OF-VM --name opendds
 
 Provision by Chocolatey
 -----------------------
-The required softwares (SVN, VC++,...) are installed by Chocolatey (http://chocolatey.org) which is a "apt/yum" like package manager for Windows. The package for Chocolatey is easy to develop only if you know something about powershell. For quick start to build one package, please see [A Simple Tutorial: Create and Publish Chocolatey Packages](http://www.topbug.net/blog/2012/07/02/a-simple-tutorial-create-and-publish-chocolatey-packages/) or my VC++ express 2010 package (https://github.com/larry-fuy/Chocolatey-Packages).
+The required softwares (SVN, VC++,...) are installed by Chocolatey (http://chocolatey.org) which is a "apt/yum" like package manager for Windows. The package for Chocolatey is easy to develop only if you know something about powershell. For a quick start to build a package for Chocolatey, please see [A Simple Tutorial: Create and Publish Chocolatey Packages](http://www.topbug.net/blog/2012/07/02/a-simple-tutorial-create-and-publish-chocolatey-packages/) or my VC++ express 2010 package (https://github.com/larry-fuy/Chocolatey-Packages).
 
 
 
