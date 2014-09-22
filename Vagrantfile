@@ -17,12 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 #  config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
 
    config.vm.communicator="winrm"
-#$script = <<SCRIPT
-#  reg add "HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
-#  netsh advfirewall firewall set rule name="Remote Desktop (TCP-In)" new enable=yes
-#SCRIPT
- 
-# config.vm.provision "shell", inline: $script
 config.vm.provision "shell", path: "install_opendds.bat"
 
   # Disable automatic box update checking. If you disable this, then
