@@ -8,10 +8,15 @@ Install
 ```
 git clone https://github.com/larry-fuy/vagrant-opendds
 cd vagrant-opendds
+```
+Run the box
+```
 vagrant up
 ```
+Note before run the box, you need build the base box *opendds* first, see belowing.
 
-Build base box
+
+Build base box *opendds*
 --------------
 You could build your base Vagrant box and then provision and install OpenDDS instead of downloading existed box (yongfu/opendds) from Vagrant public repo (vagrantcloud.com). 
 
