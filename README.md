@@ -22,7 +22,6 @@ You could build your base Vagrant box and then provision and install OpenDDS ins
 
 1. If you decide to build the base box from scratch, the major steps include to create and configure a Windows VirtualBox VM according to Vagrant base box requirement (https://docs.vagrantup.com/v2/boxes/base.html). Please see the links [1](http://tallmaris.com/using-vagrant-with-chocolatey-and-puppet-to-spin-up-virtual-machines/), [2](http://tallmaris.com/vagrant-with-windows-support/) and [3](http://williamwalker.me/blog/creating-a-custom-vagrant-box.html) for details. ~~Due to the bugs in Microsoft Powershell, you have to install Chocolatey (http://chocolatey.org) in this base box to let Vagrant provision successfully.~~ After creation of the base box, you can distribute it by uploading it to Vagrant public repo or just use it directly.
 2. You can also download a Windows 7 box from Vagrant public repo to save time and efforts on configuring the vanilla virtual box as shown in this Vagrantfile.
-```
 
 Provision by Chocolatey
 -----------------------
