@@ -10,14 +10,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-#   config.vm.box = "lmayorga1980/windows7-sp1"
-#  config.vm.box = "ferventcoder/win7pro-x64-nocm-lite"
-  config.vm.box = "opendds"
+   config.vm.box = "ferventcoder/win7pro-x64-nocm-lite"
+#  config.vm.box = "opendds"
 #  config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
 #  config.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
 
-   config.vm.communicator="winrm"
+  config.vm.communicator="winrm"
+#  config.vm.provision "shell", path: "install_opendds.bat"
 config.vm.provision "shell", path: "install_opendds.bat"
+  config.vm.provider "virtualbox" do |v|
+    v.name = "open_dds"
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
