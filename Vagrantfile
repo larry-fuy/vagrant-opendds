@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.communicator="winrm"
 #  config.vm.provision "shell", path: "install_opendds.bat"
-config.vm.provision "shell", path: "install_opendds.bat"
+config.vm.provision "shell", path: "stage.bat"
   config.vm.provider "virtualbox" do |v|
     v.name = "open_dds"
   end
