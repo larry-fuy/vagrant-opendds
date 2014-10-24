@@ -15,7 +15,7 @@ print_usage() {
 
 if [ $# -eq 0 ]; then
 	cp install_opendds_configure.bat install_opendds.bat
-else if [ $# -eq 1 ]; then 
+elif [ $# -eq 1 ]; then 
 	cp install_opendds_autobuild.bat install_opendds.bat
 	sed -i 's/dds_build/$1/g' install_opendds.bat
 else 
